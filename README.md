@@ -1,8 +1,13 @@
-# React + Vite
+# Memory Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A memory game created using React and Javascript, for The Odin Project Curriculum.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This memory game consists of several images displayed on the screen.
+The player must click one of the image, after the click the images displayed will change, the game consists in not clicking the same image twice.
+If the player manage to not click the same image for 5 rounds, the player win. Otherwise the player loses and the game restart.
+
+## Technical aspects
+
+pass
