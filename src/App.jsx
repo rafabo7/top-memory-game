@@ -5,26 +5,33 @@ import { useState, useEffect } from "react"
 
 
 function App () {
-  const [cards, setCards] = useState({})
+  const [cards, setCards] = useState(null)
   const [clicked, setClicked] = useState(null)
 
   const getPokemons = async () => {
-    const randomId = Math.floor(Math.random() * 200)
+    const newPokemons = []
+
+    while (newPokemons.length < 5) {
+      
+      const randomId = Math.floor(Math.random() * 387)
+      if (randomId === 0) continue
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomId}/`)
     const json = await response.json()
-    const {
-      name,
-      id,
-      sprites: {
-        front_default: sprite
+      const newCard = {
+        name: json.name,
+        id: json.id,
+        sprite: json.sprites.front_default
       }
-    } = json
+  
 
-    const newCard = {name, id, sprite}
+      if (newPokemons.some( e => e.id === newCard.id)) continue
+      newPokemons.push(newCard)
 
-    setCards(newCard)
+
+    }
+
+    setCards(newPokemons)
   }
-console.log(cards);
 
   
 
