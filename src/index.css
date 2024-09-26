@@ -1,0 +1,44 @@
+@import url('https://fonts.cdnfonts.com/css/thegoodmonolith');
+
+html {
+    box-sizing: border-box;
+}
+
+#root {
+    margin: 0 auto;
+    width: 90%;
+}
+
+body {
+    margin: 0 auto;
+    
+    font-family: 'TheGoodMonolith', sans-serif;
+    font-size: 18px;
+                                                
+}
+
+.cards-grid {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.cards-grid .card {
+    text-align: center;
+
+}
+
+.cards-grid .card p {
+    margin: 0;
+    padding: 8px 0;
+}
+
+.cards-grid .card img {
+    width: 200px
+
+}
+
