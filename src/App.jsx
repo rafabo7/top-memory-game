@@ -49,16 +49,12 @@ function App () {
 
 return (
   <>
-  <section className="cards-grid">
-    {cards && cards.map( e => (<div className="card" key={e.id}>
-      <img  src={e.sprite} alt={e.name} />
-      <p>{e.name}</p>
-      </div>)
-    )}
-  </section>
+  
   <button onClick={() => getPokemons()}>click</button>
   <Header />
-  <Game />
+  <Game 
+    cards={cards}
+    clickImage={onClickImage} />
   <Footer />
   </>
 )
