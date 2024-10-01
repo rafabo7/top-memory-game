@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 
 function App () {
   const [cards, setCards] = useState(null)
-  const [clicked, setClicked] = useState(null)
+  const [clicked, setClicked] = useState([])
 
   const getPokemons = async () => {
     const newPokemons = []
@@ -31,6 +31,16 @@ function App () {
     }
 
     setCards(newPokemons)
+  }
+
+
+  const onClickImage = (e) => {
+    const target = e.target
+    const clickedDiv = target.closest('div')
+    const clickedId = clickedDiv.dataset.id
+    const newClicked = [...clicked, clickedId]
+    console.log(newClicked);
+    setClicked(newClicked)
   }
 
   
